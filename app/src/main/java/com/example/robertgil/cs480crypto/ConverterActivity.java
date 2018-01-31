@@ -124,19 +124,9 @@ public class ConverterActivity extends AppCompatActivity {
 
         protected void onPostExecute(String response) {
             if (response == null) {
-            /*
-            StringBuilder what = new StringBuilder();
-
-            for (int i = 0; i < rates.length; i++) {
-            what.append(rates[i] + " ");
-            }
-            response = what.toString();
-
-            */
                 response = "Update Failed.";
             }
             progressBar.setVisibility(View.GONE);
-//            responseView.setText(response);
             Toast.makeText(ConverterActivity.this, "Refreshed Rates!", Toast.LENGTH_SHORT).show();
         }
     }
